@@ -62,9 +62,11 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT):
     blast_file = open(xml_file_name, 'r')
     blast_records = NCBIXML.parse(blast_file)
 
+    
     for blast_record in blast_records:
         for alignment in blast_record.alignments:
             for hsp in alignment.hsps:
+                
                 print('****Alignment****')
                 print('sequence:', alignment.title)
                 print('length:', alignment.length)
@@ -74,13 +76,32 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT):
                 print(hsp.query[0:90] +'...')
                 print(hsp.match[0:90] +'...')
                 print(hsp.sbjct[0:90] +'...')
-    blast_file.close()
-        
-#doBlast(TEST_SEQ)
-#parseBlast()
-print(open(DEFAULT_OUTPUT, 'w').read())
+#ISSUE
+# read up on this
+# https://biopython.org/DIST/docs/api/Bio.SearchIO._model.hsp-pysrc.html
+                # this returns only the values of the
+                # first blast result.
+                # not sure what to do with the other blasts?
+                # maybe implement an e-val (or other) requirement
+                # to return stuff by, otherwise, return 'nothing'-values
+                # or turn this into a generator and spit out multiple
+                # results per header/seq and save both.
+                
+                # What
+                # would be the purpose of keeping multiple results?
+                
+                blast_file.close()
+                return 
+    
+#/ISSUE
+            
+def main():
+    doBlast(TEST_SEQ)
+    parseBlast()
+    
 
 if __name__ == "__main__":
     print("running from main blastaseq with default testvalues!")
+    main()
 else:
     print("succesfully imported blastaseq")

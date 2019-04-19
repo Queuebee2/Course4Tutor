@@ -54,7 +54,7 @@ def doBlast(query_seq, filename=DEFAULT_OUTPUT):
     blast_file.seek(0)
     blast_file.close()
 
-def parseBlast(xml_file_name=DEFAULT_OUTPUT):
+def parseBlast(xml_file_name=DEFAULT_OUTPUT,verbose=False):
     # take a filename, asuming it is a textfile with xml formatted blast
     # results and output some standard information
 
@@ -66,16 +66,16 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT):
     for blast_record in blast_records:
         for alignment in blast_record.alignments:
             for hsp in alignment.hsps:
-                
-                print('****Alignment****')
-                print('sequence:', alignment.title)
-                print('length:', alignment.length)
-                print('score:', hsp.score)
-                print('gaps:', hsp.gaps)
-                print('e-value:', hsp.expect)
-                print(hsp.query[0:90] +'...')
-                print(hsp.match[0:90] +'...')
-                print(hsp.sbjct[0:90] +'...')
+                if verbose:
+                    print('****Alignment****')
+                    print('sequence:', alignment.title)
+                    print('length:', alignment.length)
+                    print('score:', hsp.score)
+                    print('gaps:', hsp.gaps)
+                    print('e-value:', hsp.expect)
+                    print(hsp.query[0:90] +'...')
+                    print(hsp.match[0:90] +'...')
+                    print(hsp.sbjct[0:90] +'...')
 #ISSUE
 # read up on this
 # https://biopython.org/DIST/docs/api/Bio.SearchIO._model.hsp-pysrc.html
@@ -91,7 +91,11 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT):
                 # would be the purpose of keeping multiple results?
                 
                 blast_file.close()
-                return 
+                return [alignment.title,
+                        alignment.length,
+                        hsp.score,
+                        hsp.gaps,
+                        hsp.expect]
     
 #/ISSUE
             

@@ -8,23 +8,29 @@ COMMON_IDENTIFIERS = [
 "@HWI-M02942:21:000000000-ACNW4:1:1101:13265:2250",
 "@HWI-M02942:21:000000000-ACNW4:1:1101:23094:3010",
 "@HWI-M02942:21:000000000-ACNW4:1:1101:8317:2760"
-] # we use common identifiers ( identifiers to find fastaQ entry pairs
+]
+
+# we use common identifiers ( identifiers to find fastaQ entry pairs
   # from file 1 and 2 ) for testing purposes/weektaak1
 def main():
     print("RUNNING MAIN (FOR TESTING! PROCESSILUMINA V.1")
-    parseFastaQ(FILES,COMMON_IDENTIFIERS)
+
+    # create test files
+    data = parseFastaQ(FILES,COMMON_IDENTIFIERS)
+    print(data)
+            
     print("DONE")
 
-def parseFastaQ(filenames, common_ids):
+def parseFastaQ(filenames, common_ids,verbose=False):
     """ assume string 'HWI' in every header"""
     
     data = dict()
 
-    for filename in FILES:
+    for filename in filenames:
         with open (filename, 'r') as f:
 
             for line in f:
-                for identifier in COMMON_IDENTIFIERS:
+                for identifier in common_ids:
                     if (identifier in line) and (
                             "@HWI" in line):
                         identifier = line
@@ -34,10 +40,11 @@ def parseFastaQ(filenames, common_ids):
                                                     replace("\n", ""))
 
 
-
+    if verbose:
         for k, v in data.items():
             print(k, v)
 
+    print("parsed fasta files!")
     return data
     print(10*"-")
 

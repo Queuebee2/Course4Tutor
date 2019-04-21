@@ -64,8 +64,8 @@ def main():
         ########## TEMPORARY CSV SOLUTION
             # we REALLY need to make sure blast requests aren't
             # made  too frequently
-            print("doing a quick 10 second nap")
-            time.sleep(10)
+            print("doing a quick 120 second nap")
+            time.sleep(120)
 
     
     # toCSV(data)

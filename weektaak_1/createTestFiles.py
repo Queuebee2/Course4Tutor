@@ -37,7 +37,7 @@ def main():
     print("DONE")
 
 if __name__ == "__main__":
-    print("running from createTestFiles main()')
+    print("running from createTestFiles main()")
     main()
 else:
     print("why did you import createTestFiles????")

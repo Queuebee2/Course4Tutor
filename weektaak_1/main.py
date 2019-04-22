@@ -19,10 +19,10 @@ import csv
 # TEST VALUES
 FILE_1 = "testdata_file2.txt"
 FILE_2 = "testdata_file1.txt"
-FILES = [FILE_1, FILE_2]
+TEST_FILES = [FILE_1, FILE_2]
 
-REAL_FILES = ["-at-HWI-M02942_file1.txt",
-              "-at-HWI-M02942_file2.txt"]
+FILES = ["-at-HWI-M02942_file1.txt",
+         "-at-HWI-M02942_file2.txt"]
 
 # varname says it all
 deprecated_ids = ["@HWI-M02942:21:000000000-ACNW4:1:1101:13265:2250",
@@ -134,69 +134,98 @@ def main():
         # here we go through multiple types of blast programs
         # using different databases and different matrices.
         #
-        for kwargs in BLAST_KWARGS_LIST:
-            message = 'blasting' + seq_id + " " + str(kwargs)
-            print(message)
 
-            # set sequence in the kwarg dict         
-            kwargs['sequence'] = sequence
+        alreadyInSaveFileCount = exists(seq_id, len(BLAST_KWARGS_LIST))
+        if alreadyInSaveFileCount:
+            print(seq_id, 'already exists', alreadyInSaveFileCount, 'times. skipping')
+        else:
+            for kwargs in BLAST_KWARGS_LIST:
+                message = 'blasting' + seq_id + " " + str(kwargs)
+                print(message)
 
-            # perform a blast through NCBIWWW.qblast
-            # an xml file will be created
-            doBlast(DEFAULT_BLAST_FILENAME, **kwargs)
+                # set sequence in the kwarg dict         
+                kwargs['sequence'] = sequence
 
-            # parse the output xml file
-            result_attributes = parseBlast(DEFAULT_BLAST_FILENAME,
-                                           verbose=True)
+                # perform a blast through NCBIWWW.qblast
+                # an xml file will be created
+                doBlast(DEFAULT_BLAST_FILENAME, **kwargs)
 
-            # ISSUE      # parseBlast just spits out any first result as of now
-            # maybe, paramaters could be passed setting boundaries
-            # for certain values. e.g. when an e-value is too high,
-            # don't parse/write the data
-            # ISSUE
-            print(42 * "-")
+                # parse the output xml file
+                result_attributes = parseBlast(DEFAULT_BLAST_FILENAME,
+                                               verbose=True)
 
-            # dict format { header: [title, length, score, gaps, e-val ] }
-            data[header_key] = result_attributes
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+                # ISSUE      # parseBlast just spits out any first result as of now
+                # maybe, paramaters could be passed setting boundaries
+                # for certain values. e.g. when an e-value is too high,
+                # don't parse/write the data
+                # ISSUE
+                print(42 * "-")
 
-            result_ids = []
-            for k, param in kwargs.items():
-                if k != 'sequence':
-                    result_ids.append(param)
+                # dict format { header: [title, length, score, gaps, e-val ] }
+                data[header_key] = result_attributes
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-            result_ids = result_ids + [timestamp]
+                result_ids = []
+                for k, param in kwargs.items():
+                    if k != 'sequence':
+                        result_ids.append(param)
 
-            result_row = [seq_id] + result_attributes + result_ids
+                result_ids = result_ids + [timestamp]
 
-            # save found stuff to csvfile (for now)
-            # later: this could be a function that
-            # inserts the data into a database or
-            # uses it to further analyse the origin of the sequence
-            # and potential uses
-            saveData(result_row)
+                result_row = [seq_id] + result_attributes + result_ids
 
-            # resolved using saveData()
-            """
-                    ########## TEMPORARY CSV SOLUTION
-                        row = [header_key] + result_attributes
-                        print("writing to csv")
-                        #row = ",".join([str(i) for i in row])
-                        writerhandle.writerow(row)
-                        print(row)
-                        print(10*"_-")
-                        
-                    ########## TEMPORARY CSV SOLUTION
-            """
-            # we REALLY need to make sure blast requests aren't
-            # made  too frequently
-            # note: in the NCBIWWW module, hardcoded 20-90 second
-            # waits are already present.
-            print("doing a quick 120 second nap")
-            time.sleep(120)
+                # save found stuff to csvfile (for now)
+                # later: this could be a function that
+                # inserts the data into a database or
+                # uses it to further analyse the origin of the sequence
+                # and potential uses
+                saveData(result_row)
 
-    # toCSV(data)
+                # resolved using saveData()
+                """
+                        ########## TEMPORARY CSV SOLUTION
+                            row = [header_key] + result_attributes
+                            print("writing to csv")
+                            #row = ",".join([str(i) for i in row])
+                            writerhandle.writerow(row)
+                            print(row)
+                            print(10*"_-")
+                            
+                        ########## TEMPORARY CSV SOLUTION
+                """
+                # we REALLY need to make sure blast requests aren't
+                # made  too frequently
+                # note: in the NCBIWWW module, hardcoded 20-90 second
+                # waits are already present.
+                print("doing a quick 120 second nap")
+                time.sleep(120)
+
+        # toCSV(data)
     print("main done (testprint)")
+
+def exists(identifier, threshold=4, filename="savefile.csv"):
+    """ identifier: an identifier for a sequence (e.g. a header)
+        threshold : the amount of times the identifier can appear
+        in the database ( a csv file for now )
+
+        doesn't check whether lines are unique (as of now)
+    """
+    # this function can later be upgraded to query a database with
+    # sql
+    
+    # checks the results file for  len(BLAST_KWARGS_LIST) amount
+    # of header_ids.
+    with open(filename, 'r') as savefile:
+        count = 0
+        for line in savefile:
+            if identifier in line:
+                count +=1
+
+    if count < threshold:
+        return False
+    else:
+        return count
+        
 
 
 def saveData(data, filename="savefile.csv"):

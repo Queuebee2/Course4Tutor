@@ -1,0 +1,23 @@
+seq id,title,length,score,gaps,e-val,program,database,expect,matrix,time
+:2250/2,"gi|295410288|gb|CP002017.1| Kyrpidia tusciae DSM 2912, complete genome",3384766,123.0,0,6.62521e-07,tblastx,nt,10,BLOSUM80,2019-04-22 03:36
+:2250/2,gi|1404730983|gb|PZN89175.1| peptidase S58 [bacterium],314,250.0,0,2.99522e-26,blastx,nr,10,BLOSUM80,2019-04-22 03:41
+:2250/2,gi|1212020858|ref|WP_088571152.1| peptidase S58 family protein [Thermoflexus hugenholtzii],334,200.0,4,1.37726e-18,blastx,refseq_protein,10,BLOSUM80,2019-04-22 03:46
+:2250/2,"gi|1519485983|pdb|5JBH|2 Chain 2, 16S ribosomal RNA",1518,47.0,0,0.685014,tblastx,pdb,10,BLOSUM80,2019-04-22 03:50
+:3010/2,"gi|1102955210|gb|CP016312.1| Thermus brockianus strain GE-1, complete genome",2035182,260.0,0,2.00559e-26,tblastx,nt,10,BLOSUM80,2019-04-22 04:04
+seq id,title,length,score,gaps,e-val,program,database,expect,matrix,time
+:2250/2,"gi|295410288|gb|CP002017.1| Kyrpidia tusciae DSM 2912, complete genome",3384766,123.0,0,6.6001e-07,tblastx,nt,10,BLOSUM80,2019-04-22 10:41
+:2250/2,gi|1404730983|gb|PZN89175.1| peptidase S58 [bacterium],314,250.0,0,2.99522e-26,blastx,nr,10,BLOSUM80,2019-04-22 10:44
+:2250/2,gi|1212020858|ref|WP_088571152.1| peptidase S58 family protein [Thermoflexus hugenholtzii],334,200.0,4,1.37726e-18,blastx,refseq_protein,10,BLOSUM80,2019-04-22 10:48
+:2250/2,"gi|1519485983|pdb|5JBH|2 Chain 2, 16S ribosomal RNA",1518,47.0,0,0.685014,tblastx,pdb,10,BLOSUM80,2019-04-22 10:51
+:3010/2,"gi|1102955210|gb|CP016312.1| Thermus brockianus strain GE-1, complete genome",2035182,260.0,0,2.00559e-26,tblastx,nt,10,BLOSUM80,2019-04-22 10:55
+:3010/2,gi|740214587|ref|WP_038056437.1| translation initiation factor IF-2 [Thermus amyloliquefaciens],571,247.0,2,1.2635e-25,blastx,nr,10,BLOSUM80,2019-04-22 10:58
+:3010/2,gi|740214587|ref|WP_038056437.1| translation initiation factor IF-2 [Thermus amyloliquefaciens],571,247.0,2,8.94447e-26,blastx,refseq_protein,10,BLOSUM80,2019-04-22 11:03
+:3010/2,"gi|958159611|pdb|5A8L|A Chain A, Human Erf1 And The Hcmv Nascent Peptide In The Translation Termination Complex",5025,51.0,0,0.168274,tblastx,pdb,10,BLOSUM80,2019-04-22 11:05
+:2250/1,"gi|320149275|gb|CP001962.1| Thermus scotoductus SA-01, complete genome",2346803,184.0,0,4.1913e-15,tblastx,nt,10,BLOSUM80,2019-04-22 11:10
+:2250/1,gi|1404730983|gb|PZN89175.1| peptidase S58 [bacterium],314,271.0,0,1.59213e-29,blastx,nr,10,BLOSUM80,2019-04-22 11:13
+:2250/1,gi|1480039397|ref|WP_119392796.1| peptidase S58 family protein [Phyllobacteriaceae bacterium SYSU D60012],342,198.0,1,3.22097e-18,blastx,refseq_protein,10,BLOSUM80,2019-04-22 12:23
+:2250/1,"gi|485601478|pdb|3J3F|5 Chain 5, Structure Of The H. Sapiens 60s Rrna",5070,53.0,0,0.0915981,tblastx,pdb,10,BLOSUM80,2019-04-22 12:26
+:3010/1,"gi|297163432|gb|CP002049.1| Truepera radiovictrix DSM 17093, complete genome",3260398,261.0,0,1.44339e-26,tblastx,nt,10,BLOSUM80,2019-04-22 12:30
+:3010/1,gi|502942861|ref|WP_013177837.1| translation initiation factor IF-2 [Truepera radiovictrix] >gi|297164756|gb|ADI14467.1| translation initiation factor IF-2 [Truepera radiovictrix DSM 17093],581,195.0,0,1.09679e-17,blastx,nr,10,BLOSUM80,2019-04-22 12:35
+:3010/1,gi|502942861|ref|WP_013177837.1| translation initiation factor IF-2 [Truepera radiovictrix],581,195.0,0,7.74886e-18,blastx,refseq_protein,10,BLOSUM80,2019-04-22 12:39
+:3010/1,"gi|958159611|pdb|5A8L|A Chain A, Human Erf1 And The Hcmv Nascent Peptide In The Translation Termination Complex",5025,74.0,0,0.000196846,tblastx,pdb,10,BLOSUM80,2019-04-22 12:41

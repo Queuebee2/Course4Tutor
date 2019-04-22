@@ -2,7 +2,7 @@
 # Github : Queuebee2
 # date   : 17-04-2019
 
-version = 12
+version = 20
 
 # notes
 # most lines are the standard method for using Bio.Blast.NCBIWWW.qblast
@@ -38,7 +38,9 @@ from Bio.Blast import NCBIXML
 TEST_SEQ ='TCCTCGATGAGGTCGTAGATGATCCGGTAGGACTTCATCGGGATGCCGCGGCGCTCGGCGGCCTTGATCACGCTGCCGGGCGGGTTCACGCCGAAGGAGAGCACCGAGGCGCCCGCGGTGCTGGCCAGCAGCAGGTCGGACTCGGTGGGGGCGCCGACCTCGGCCAGCATGATGTCGATCTCGACCTCCTTGGTCGCCTCGGCCTCGCGCAGCAGCCCGCCCTTCGTGGCCCCGAGCGAGCCCTGGGCTCCGGCGCCCCACCCCCGGTTGCTCGTCCTCCTCCTCGGCCTCCGGGACGGGG'
 DEFAULT_OUTPUT = "blast_result.xml"
 
-def doBlast(query_seq, filename=DEFAULT_OUTPUT):
+# blast types and their databases/matrices
+
+def doBlast(filename=DEFAULT_OUTPUT, **kwargs):
     # take a sequence to execute a blastn against the nt database
     # to do : add blasttype, db and matrix parameters
 
@@ -46,7 +48,7 @@ def doBlast(query_seq, filename=DEFAULT_OUTPUT):
     blast_file = open(filename, 'w')
 
     # execute blast
-    result_handle = NCBIWWW.qblast("blastn", "nt", query_seq)
+    result_handle = NCBIWWW.qblast(**kwargs)
                                    
     
     # write results ( xml-string )

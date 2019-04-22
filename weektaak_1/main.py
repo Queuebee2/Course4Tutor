@@ -171,7 +171,10 @@ def main():
                         result_ids.append(param)
 
                 result_ids = result_ids + [timestamp]
-
+                # hack to fix NoneType lists coming from failed/rejected blasts
+                # maybe has to do with e-values or actually when nothing comes up
+                if not result_attributes:
+                    result_attributes = ['nothing' for i in range(5)]
                 result_row = [seq_id] + result_attributes + result_ids
 
                 # save found stuff to csvfile (for now)

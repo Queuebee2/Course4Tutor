@@ -7,4 +7,4 @@ We gebruiken Azure om de site te runnen. Je komt op de Azure pagina door portal.
 3. In het *Deployment Center*  kan je de repo zien die op dat moment wordt gebruikt.
 
 ## Overig
-De file die je door middel van Azure wil runnen moet App.py heten.
+De file die je door middel van Azure wil runnen moet *App.py* heten.

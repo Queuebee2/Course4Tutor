@@ -41,7 +41,7 @@ DEFAULT_OUTPUT = "blast_result.xml"
 # blast types and their databases/matrices
 
 def doBlast(filename=DEFAULT_OUTPUT, **kwargs):
-    # take a sequence to execute a blastn against the nt database
+    # take a sequence to exec5ute a blastn against the nt database
     # to do : add blasttype, db and matrix parameters
 
     # open output file
@@ -56,7 +56,7 @@ def doBlast(filename=DEFAULT_OUTPUT, **kwargs):
     blast_file.seek(0)
     blast_file.close()
 
-def parseBlast(xml_file_name=DEFAULT_OUTPUT,verbose=False):
+def parseBlast(xml_file_name=DEFAULT_OUTPUT, verbose=False):
     # take a filename, asuming it is a textfile with xml formatted blast
     # results and output some standard information
 
@@ -66,8 +66,11 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT,verbose=False):
 
     
     for blast_record in blast_records:
+        if verbose: print("using record:",blast_record,"\nfrom records:",blast_records)
         for alignment in blast_record.alignments:
+            if verbose: rint("using alignment:", alignment, "\nfrom alignments:",blast_record.alignments)
             for hsp in alignment.hsps:
+                if verbose: print("using hsp:",hsp,"from hsps:", alignment.hsps)
                 if verbose:
                     print('****Alignment****')
                     print('sequence:', alignment.title)
@@ -92,7 +95,7 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT,verbose=False):
                 # What
                 # would be the purpose of keeping multiple results?
                 
-                blast_file.close()
+                blast_file.close() # why is this here
                 return [alignment.title,
                         alignment.length,
                         hsp.score,
@@ -100,10 +103,14 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT,verbose=False):
                         hsp.expect]
     
 #/ISSUE
-            
+
 def main():
-    doBlast(TEST_SEQ)
-    parseBlast()
+    doBlast(DEFAULT_OUTPUT,**{'program': "tblastx",
+                              'database': "nt",
+                              'sequence':TEST_SEQ,
+                              'expect': 10,
+                              'matrix_name': "BLOSUM80", })
+    parseBlast(verbose=True)
     
 
 if __name__ == "__main__":

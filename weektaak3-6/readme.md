@@ -8,3 +8,22 @@ We gebruiken Azure om de site te runnen. Je komt op de Azure pagina door portal.
 
 ## Overig
 De file die je door middel van Azure wil runnen moet *App.py* heten.
+
+## Uitleg over Jinja
+Door middel van Jinja kan je zelf makkelijk een template maken.
+Bij Jinja kan je elementen uit een bestaand html file gebruiken voor andere html files.
+Dit kan door bijvoorbeeld
+```Jinja
+# maak een block die je ook op een andere html file wil gebruiken
+{% block content %} 
+{% endblock %}
+# met endblock sluit je het block
+
+# om dit block uit "eenhoorn.html" te gebruiken
+# in je andere file
+{% extends "eenhoorn.html" %}
+
+# Als je niks wil overwriten, dan is denk ik include handiger
+# Met extend kan je blocken vervangen
+```
+

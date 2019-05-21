@@ -33,4 +33,4 @@ Dit kan door bijvoorbeeld
 ```
 
 Voor meer uitleg verwijs ik onder andere naar de site:
-- [Flask uitleg](https://flask-navigation.readthedocs.io/en/latest/)
+- [Flask uitleg](http://flask.pocoo.org/)

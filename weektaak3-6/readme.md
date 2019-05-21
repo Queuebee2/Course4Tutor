@@ -1,5 +1,10 @@
 # Project overzicht
 
+## Deadlines
+- onderzoeksverslag 1 week na tutor op **11 juni** (zelfde dag als IPV)
+- applicatie en technische documentatie op **14 juni**
+
+
 ## Uitleg over Azure
 We gebruiken Azure om de site te runnen. Je komt op de Azure pagina door portal.azure.com in je search balk typen.
 1. Ga dan naar *Dashboard*.

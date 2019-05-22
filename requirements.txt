@@ -1,0 +1,10 @@
+# Requirements file (van martijn vd bruggen's owe4a_basis)
+# Libraries worden automatisch bij deployment geinstalleerd
+# De opgeven versie is optioneel
+# Mocht een requirement een foutmelding geven, probeer dan het versienummer weg te laten
+# Dit kan het gevolg zijn van een andere Python versie
+Flask==1.0.2
+Jinja2>=2.10.1
+Werkzeug==0.14.1
+mysql-connector-python==8.0.11
+biopython==1.73

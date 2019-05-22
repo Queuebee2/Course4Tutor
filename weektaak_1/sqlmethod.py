@@ -1,0 +1,2 @@
+# lmao yes nice obfuscation noob
+thingy = b'QW4zWGFtcGxlU1NBUERST1ckMGwxZDRucjNtM21iM3I0Ymxlbm9ybWFsbHlpanVzdHdyaXRlYWxpdHRsZXN0b3J5bGlrZXRoaXNhbmRpdHNhbHdheXNhZ29vZHBhc3N3b3JkdGhhdHdheQ=='

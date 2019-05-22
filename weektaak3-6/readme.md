@@ -32,5 +32,6 @@ Dit kan door bijvoorbeeld
 # Met extend kan je blocken vervangen
 ```
 
-Voor meer uitleg verwijs ik onder andere naar de site:
-- [Flask uitleg](https://flask-navigation.readthedocs.io/en/latest/)
+Voor meer uitleg verwijs ik onder andere naar deze sites:
+- [Flask uitleg](http://flask.pocoo.org/)
+- [Flask navigation uitleg](https://flask-navigation.readthedocs.io/en/latest/)

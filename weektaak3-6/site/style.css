@@ -42,7 +42,13 @@ nav ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+
 	
+}
+
+.round {
+	border-radius: 25px;
+	background-color: orange;
 }
 
 li {
@@ -53,9 +59,9 @@ li {
 li a {
 	display: inline;
 	text-decoration: none;
-	background-color: orange;
 	color: white;
 	padding: 10px;
+	background-color: orange;
 
 }
 
@@ -74,7 +80,34 @@ p{
 	color: black;
 }
 
+
+
 /* De div moeten naast elkaar is mooier */ 
+.links {
+	float: left;
+	width: 400px;
+	background-color: green;
+	vertical-align: top;
+	padding-top: 0px;
+	margin-top: 0px;
+	
+}
+
+.rechts {
+	background-color: red;
+	margin: 0 0 0 410px;
+	vertical-align: top;
+	
+}
+
+.clear {
+	clear: both;
+}
+
+.alles {
+	width: 800px;
+	text-align: center;
+}
 
 
 /* code hieronder overgenomen van w3schools */
@@ -163,12 +196,12 @@ p{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 0.8} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .8} 
   to {opacity: 1}
 }
 

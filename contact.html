@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<link rel = "icon" href= "eenhoorn.png" type="image/x-icon">
+<link rel = "icon" href= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" type="image/x-icon">
 <title>EENhoorn</title>
 <meta charset="UTF-8">
 <link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
@@ -22,6 +22,24 @@
 	</ul>
 </nav>
 </header><br><br>
+<div>
+	<h1>Contact</h1>
+	<p>Hieronder kan je contact opnemen met het team.
+	<form method="POST">
+	mail*:
+	<input type="email" name="mailadres">
+	<br>
+	telefoonnummer:
+	<input type="tel" name = "telefoonnummer">
+	<br>
+	Vraag:
+	<input type="text" name = "vraag">
+	<br>
+	<input type="submit" value = "Submit">
+</form>
+	<br><br>
+	<i>* Betekent dat het verplicht is om in te vullen.</i></p>
+</div>
 <hr>
 <footer>
 <div class = "bottom">

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<link rel = "icon" href= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" type="image/x-icon">
+<title>EENhoorn</title>
+<meta charset="UTF-8">
+<link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
+</head>
+<main><body>
+<header>
+<div>
+<img src= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" alt = "eenhoorntje" class = "logo">
+<h1 class = "top" class= "naar_links">EENhoorn</h1>
+</div>
+<nav class = "rond">
+	<ul>
+		<li><a href = "index" class = "eerste_nav">Home</a></li>
+		<li><a href= "about">Over het project</a></li>
+		<li><a href = "statistieken">Statistieken</a></li>
+		<li><a href= "zelf_blasten">Zelf Blasten</a></li>
+		<li><a href="FAQ">FAQ</a></li>
+		<li><a href= "contact" class = "actief">Contact</a></li>
+	</ul>
+</nav>
+</header><br><br>
+<div>
+	<h1>Contact</h1>
+	<p>Hieronder kan je contact opnemen met het team.
+	<form method="POST">
+	mail*:
+	<input type="email" name="mailadres">
+	<br>
+	telefoonnummer:
+	<input type="tel" name = "telefoonnummer">
+	<br>
+	Vraag:
+	<input type="text" name = "vraag">
+	<br>
+	<input type="submit" value = "Submit">
+</form>
+	<br><br>
+	<i>* Betekent dat het verplicht is om in te vullen.</i></p>
+</div>
+<hr>
+<footer>
+<div class = "bottom">
+Groep EENhoorn bestaat uit vier groepsleden, die studeren aan de Hogeschool van Arnhem en Nijmegen.
+Deze site is gemaakt om de gevonden organismen en eiwitten uit compost op een overzichtelijke manier te laten zien aan biologen.
+Op deze site is tevens de functie van één van de eiwitten te vinden.
+De organismen en eiwitten zijn gevonden door middel van BLAST van NCBI. De groep heeft een geautomatiseerde <br>
+BLAST tool ontwikkeld.
+De tool en uitkomsten zijn voor het laatst geüpdatet op
+</div>
+</footer>
+</body></main>
+</html>

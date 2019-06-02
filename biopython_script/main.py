@@ -197,9 +197,9 @@ def main():
                 # made  too frequently
                 # note: in the NCBIWWW module, hardcoded 20-90 second
                 # waits are already present.
-                print("doing a quick 120 second nap")
-                time.sleep(120)
-
+                print("doing a quick 13 second nap")
+                time.sleep(13)
+                
         # toCSV(data)
     print("main done (testprint)")
 

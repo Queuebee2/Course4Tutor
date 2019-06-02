@@ -72,13 +72,7 @@ matrices = {'blastn': [],
 # kwargs to use for qblast
 BLAST_KWARGS_LIST = [
     {'program': "tblastx", 'database': "nt",
-     'expect': 10, 'matrix_name': "BLOSUM80", },
-    {'program': "blastx", 'database': "nr", 'expect': 10,
-     'matrix_name': "BLOSUM80", },
-    {'program': "blastx", 'database': "refseq_protein", 'expect': 10,
-     'matrix_name': "BLOSUM80", },
-    {'program': "tblastx", 'database': "pdb", 'expect': 10,
-     'matrix_name': "BLOSUM80", }
+     'expect': 10, 'matrix_name': "BLOSUM62", }
 ]
 
 

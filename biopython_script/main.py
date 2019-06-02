@@ -21,8 +21,11 @@ FILE_1 = "testdata_file2.txt"
 FILE_2 = "testdata_file1.txt"
 TEST_FILES = [FILE_1, FILE_2]
 
-FILES = ["-at-HWI-M02942_file1.txt",
+
+FIRST_BATCH_FILES = ["-at-HWI-M02942_file1.txt",
          "-at-HWI-M02942_file2.txt"]
+
+NEW_BATCH_FILES = ["data_set1.txt"]
 
 # varname says it all
 deprecated_ids = ["@HWI-M02942:21:000000000-ACNW4:1:1101:13265:2250",
@@ -90,7 +93,7 @@ def main():
     # grab {header:[nucseq, qualityscore, qualityASCIImap]}
     # from input file(s)
     # note: first dataset was 2MB 
-    header_data_dict = parseFastaQ(FILES, COMMON_IDENTIFIERS)
+    header_data_dict = parseFastaQ(NEW_BATCH_FILES)
 
     # show amount of sequences to be blasted
     print(len(header_data_dict))
@@ -231,7 +234,7 @@ def exists(identifier, threshold=4, filename="savefile.csv"):
         
 
 
-def saveData(data, filename="savefile.csv"):
+def saveData(data, filename="data_backup.csv"):
     # save a line of data to the csv file
     with open(filename, 'a', newline='') as savefile:
         savewriter = csv.writer(savefile)
@@ -243,7 +246,7 @@ def toCSV(dataDict):
     print("writing dict to csv file")
 
     with open("output.csv", 'w') as csvfile:
-        writerhandle = csv.writer(csvfile, delimiter=',')
+        writerhandle = csv.writer(csvfile, delimiter='\t')
 
         writerhandle.writerow(["header", "title", "length",
                                "score", "gaps", "e-val"])

@@ -138,7 +138,7 @@ def main():
         else:
             for kwargs in BLAST_KWARGS_LIST:
                 message = 'blasting' + seq_id + " " + str(kwargs)
-                print(message)
+                # print(message)
 
                 # set sequence in the kwarg dict         
                 kwargs['sequence'] = sequence
@@ -156,7 +156,7 @@ def main():
                 # for certain values. e.g. when an e-value is too high,
                 # don't parse/write the data
                 # ISSUE
-                print(42 * "-")
+                # print(42 * "-")
 
                 # dict format { header: [title, length, score, gaps, e-val ] }
                 data[header_key] = result_attributes
@@ -197,7 +197,7 @@ def main():
                 # made  too frequently
                 # note: in the NCBIWWW module, hardcoded 20-90 second
                 # waits are already present.
-                print("doing a quick 13 second nap")
+                # print("doing a quick 13 second nap")
                 time.sleep(13)
                 
         # toCSV(data)

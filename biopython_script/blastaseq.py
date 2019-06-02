@@ -68,7 +68,7 @@ def parseBlast(xml_file_name=DEFAULT_OUTPUT, verbose=False):
     for blast_record in blast_records:
         if verbose: print("using record:",blast_record,"\nfrom records:",blast_records)
         for alignment in blast_record.alignments:
-            if verbose: rint("using alignment:", alignment, "\nfrom alignments:",blast_record.alignments)
+            if verbose: print("using alignment:", alignment, "\nfrom alignments:",blast_record.alignments)
             for hsp in alignment.hsps:
                 if verbose: print("using hsp:",hsp,"from hsps:", alignment.hsps)
                 if verbose:

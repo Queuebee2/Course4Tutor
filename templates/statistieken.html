@@ -4,7 +4,6 @@
 <title>EENhoorn</title>
 <meta charset="UTF-8">
 <link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
-<script src="myscripts.js"></script>
 </head>
 <main><body>
 <header>
@@ -31,6 +30,7 @@ Je kan ook uit verschillende weergaven kiezen.</p>
 </div>
 <br><br>
 <canvas>
+	<script type="text/javascript" src="{{ url_for('static', filename= 'js/eerste_javascript.js') }}"></script>
 </canvas>
 <form method="POST">
 <select>

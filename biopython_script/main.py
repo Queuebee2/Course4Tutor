@@ -12,6 +12,7 @@ from processillumina import parseFastaQ  # args: filenames, common_ids
 # IMPORTS
 import time
 from datetime import datetime
+import pickle
 
 # temp import (?)
 import csv
@@ -26,7 +27,7 @@ FIRST_BATCH_FILES = ["-at-HWI-M02942_file1.txt",
          "-at-HWI-M02942_file2.txt"]
 
 NEW_BATCH_FILES = ["data_set1.txt"]
-
+CSV_FILE_NAME = "data_backup.csv"
 # varname says it all
 deprecated_ids = ["@HWI-M02942:21:000000000-ACNW4:1:1101:13265:2250",
                   "@HWI-M02942:21:000000000-ACNW4:1:1101:23094:3010",
@@ -113,13 +114,14 @@ def main():
     """
 
     print("got parsed data from parseFastaQ")
+    blastcount = 0
 
     data = dict()  # store values now,
     # in a future script,
     # reroute straight to database without
     # redundant storage within script to
     # reduce memory usage
-
+    
     for header_key, list_value in header_data_dict.items():
 
         # get sequence string to use for blast query
@@ -135,6 +137,7 @@ def main():
         alreadyInSaveFileCount = exists(seq_id, len(BLAST_KWARGS_LIST))
         if alreadyInSaveFileCount:
             print(seq_id, 'already exists', alreadyInSaveFileCount, 'times. skipping')
+            pass
         else:
             for kwargs in BLAST_KWARGS_LIST:
                 message = 'blasting' + seq_id + " " + str(kwargs)
@@ -149,7 +152,7 @@ def main():
 
                 # parse the output xml file
                 result_attributes = parseBlast(DEFAULT_BLAST_FILENAME,
-                                               verbose=True)
+                                               verbose=False)
 
                 # ISSUE      # parseBlast just spits out any first result as of now
                 # maybe, paramaters could be passed setting boundaries
@@ -181,6 +184,13 @@ def main():
                 # and potential uses
                 saveData(result_row)
 
+                # count
+                blastcount += 1
+                if blastcount % 10 == 0:
+                    print(blastcount,'sucessful blasts')
+                else:
+                    pass
+
                 # resolved using saveData()
                 """
                         ########## TEMPORARY CSV SOLUTION
@@ -203,7 +213,7 @@ def main():
         # toCSV(data)
     print("main done (testprint)")
 
-def exists(identifier, threshold=4, filename="savefile.csv"):
+def exists(identifier, threshold=2, filename=CSV_FILE_NAME):
     """ identifier: an identifier for a sequence (e.g. a header)
         threshold : the amount of times the identifier can appear
         in the database ( a csv file for now )
@@ -228,11 +238,28 @@ def exists(identifier, threshold=4, filename="savefile.csv"):
         
 
 
-def saveData(data, filename="data_backup.csv"):
+def saveData(data, filename=CSV_FILE_NAME):
     # save a line of data to the csv file
     with open(filename, 'a', newline='') as savefile:
-        savewriter = csv.writer(savefile)
+        savewriter = csv.writer(savefile, delimiter='\t')
         savewriter.writerow(data)
+
+    with open('pickled_data_list.dat', 'rb') as picklefile:
+
+        try:
+            pickleList= pickle.load(picklefile)
+            #print('successfully loaded pickle')
+        except:
+            #print('no pickleDict')
+            pickleList = list()
+
+        pickleList.append(data)
+        
+    with open('pickled_data_list.dat', 'wb') as picklefile:    
+        pickle.dump(pickleList, picklefile)
+
+
+    #print(pickleList)    
 
 
 def toCSV(dataDict):

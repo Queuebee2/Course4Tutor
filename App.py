@@ -4,7 +4,7 @@ from Bio.Blast import NCBIWWW
 from Bio import SeqIO
 from Bio.Blast import NCBIXML
 import Bio.Blast.Record as record
-
+from biopython_script.db_insert import DbConnector
 from flask import Flask, request, render_template, url_for
 from Bio.Seq import Seq
 
@@ -62,5 +62,21 @@ def cont():
 @app.route('/zelf_blasten')
 def blast():
     return render_template('zelf_blasten.html')
+
+
+@app.route('/selectdemo', methods=["GET","POST"])
+def select_results_demo():
+
+    if request.method == 'POST':
+        if request.form['button'] == 'select_results':
+            connect = DbConnector()
+            results = connect.select_results()
+            return render_template('resultaten_demo.html', blast_results=results)
+        else:
+            return render_template('resultaten_demo.html')
+    else:
+        return render_template('resultaten_demo.html')
+
+
 if __name__ == '__main__':
     app.run(use_reloader=True, debug = True)

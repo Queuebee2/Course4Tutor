@@ -70,7 +70,7 @@ matrices = {'blastn': [],
             'tblastn': [],
             'tblastx': [], }
 
-# kwargs to use for qblast
+# kwargs to use for qblast (CURRENT)
 BLAST_KWARGS_LIST = [
     {'program': "tblastx", 'database': "nt",
      'expect': 10, 'matrix_name': "BLOSUM62", }

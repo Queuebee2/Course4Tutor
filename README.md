@@ -13,3 +13,7 @@ Dit eiwit komt veel voor oid, is dat eigenlijk wel logisch.
 Bij discussie moet je naar minstens 2 artikelen te verwijzen. 
 
 Als code goed is, dan kan je dat erbij zet. "lokaal draait ie wel" <-- punten krijg je dan alsnog voor de code.
+
+
+internal error
+except vindt hij dat te wijdt. Voor internal server error hoe afvangen

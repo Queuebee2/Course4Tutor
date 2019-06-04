@@ -32,15 +32,17 @@ class DbConnector():
     
 
 
-    def insert(self, query):
+    def insert(self, query, values):
         """
         example: insert into BLAST_result (Query_id, resultaat_id,
                                            blast_alg_id, acessiecode)
                  values (000000, 000000, 000000, 00000);
 
         """
-        pass
         
+        self.cursor.execute(query, values)
+        self.connection.commit()
+        print(self.cursor.rowcount, 'record inserted')
         # can't be implemented yet, default values haven't been established
         # it's recommended to set default values on the database side 
         # so the script doesn't haveto generate them for every missing value.
@@ -92,3 +94,5 @@ class DbConnector():
 
 if __name__ == '__main__':
     app = DbConnector()
+else:
+    print('imported db_insert')

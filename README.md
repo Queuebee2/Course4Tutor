@@ -37,3 +37,7 @@ Heeft flask nodig en miss andere dingen.
 Laat zien wat gebruikt.
 Mysql connecter. Welke componenten zelf gebruikt, welke versies. 
 verwijzing naar github
+
+__BLASTEN werkt niet vanaf de site__
+
+

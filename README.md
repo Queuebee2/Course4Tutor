@@ -17,3 +17,9 @@ Als code goed is, dan kan je dat erbij zet. "lokaal draait ie wel" <-- punten kr
 
 internal error
 except vindt hij dat te wijdt. Voor internal server error hoe afvangen
+
+## Technische documentatie
+- Inleiding van ong half a4tje of kleiner
+- screenshots
+- ERD
+

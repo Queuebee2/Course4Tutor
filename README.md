@@ -19,7 +19,25 @@ internal error
 except vindt hij dat te wijdt. Voor internal server error hoe afvangen
 
 ## Technische documentatie
-- Inleiding van ong half a4tje of kleiner
+- Inleiding van ong half a4tje of kleiner (of kwart a4tje) of 1 a4tje. 
 - screenshots
 - ERD
+
+### inleiding
+Biologische casus is aanleiding en ook het doel
+"we willen compost verbeteren"
+In de compost zitten micro organismen, in kaart brengen
+om in kaart --> blasten
+Blast --> web applicatie
+om analyse mogelijk te maken
+
+### software architectuur
+client verbindt aan de webserver. Module python --> connect database en visualiseert de gegevens. 
+Heeft flask nodig en miss andere dingen.
+Laat zien wat gebruikt.
+Mysql connecter. Welke componenten zelf gebruikt, welke versies. 
+verwijzing naar github
+
+__BLASTEN werkt niet vanaf de site__
+
 

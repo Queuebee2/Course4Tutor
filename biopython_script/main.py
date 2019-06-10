@@ -114,7 +114,7 @@ def main():
     """
 
     print("got parsed data from parseFastaQ")
-    blastcount = 0
+    blastcount = 0 # little counter to keep track of progress
 
     data = dict()  # store values now,
     # in a future script,

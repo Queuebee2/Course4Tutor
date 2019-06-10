@@ -1,0 +1,276 @@
+source          1..3642249
+                     /organism="Thermobifida fusca YX"
+                     /mol_type="genomic DNA"
+                     /strain="YX"
+                     /db_xref="taxon:269800"
+     gene            195..2042
+                     /locus_tag="Tfu_0001"
+     CDS             195..2042
+                     /locus_tag="Tfu_0001"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="bacterial chromosomal replication initiator
+                     protein, DnaA"
+                     /protein_id="AAZ54041.1"
+                     /db_xref="InterPro:IPR001957"
+                     /db_xref="InterPro:IPR003593"
+                     /translation="MSEGQINLAMVWSRVLDNLDNNSLPPQHRAWLPQTRPLGLIEDT
+                     ALLAAPNEFAKEILETRLRTVISQALSAELGREIRVAVTVDPSAVPPSAPTEEASSTS
+                     SPDSSHPAPDQGSASYSGPRDTARQQAWSQQPVLPDPQPTAPQFTPSGRPGPLPGEPF
+                     SRGPDLLSSGWNPSSADPGSPASPAPVAESDTGPRYQSWDTSAPHWDQPNRWETPRPW
+                     EGGPHPGAGNRPHDVGGDSGVPSAEQPPVTPPLGVTERGDGSTNPTSGGPDQLNPKYT
+                     FDTFVIGSSNRFAHAAAVAVAEAPAKAYNPLFVYGGSGLGKTHLLHAIGHYTQRLYEG
+                     ARVRYVSSEEFTNEFINSIRDGKADGFRRRYRDIDVLLVDDIQFLENKEQTQEEFFHT
+                     FNTLHNSNKQIVISSDRPPKQLVTLEDRLRNRFEWGLITDVQPPELETRIAILRKKAA
+                     QEGLNAPPEVLEFIASKISTNIRELEGALIRVTAFASLNRQSVDLHLTSIVLRDLIPN
+                     DEVPEITAAEIMAQTASYFGLTPEDLCGTSRSRVLVTARQIAMYLCRELTDLSLPKIG
+                     QQFGRDHTTVMHADRKIRSLMAERRSIYNQVTELTNRIKQQAHHNHHHL"
+     gene            2824..3942
+                     /locus_tag="Tfu_0002"
+     CDS             2824..3942
+                     /locus_tag="Tfu_0002"
+                     /EC_number="2.7.7.7"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA polymerase III, beta subunit"
+                     /protein_id="AAZ54042.1"
+                     /db_xref="InterPro:IPR001001"
+                     /translation="MLADAVAWTARTLPVRPSVPVLAGMLLDADDVDGHQRLTLSSFD
+                     YEVSAQVSVDVDIDEPGRILVSGKLLAEIVRNLPPQTVEVSTDGAKVVVSCGSAKFTI
+                     LTLPVEDYPTLPAMPALTGSVLSDTFAAAVSQVAVAAGRDDTLPMLTGVRIEIEGSTV
+                     TLVSTDRYRLAVRELTWTPEDPNVSAVALVPAKTLADTAKSLTGGAQISIALSTAENG
+                     GEGMIGFEGGGRRTTTRLLEGEFPKYRKLLPESFNSVAEVQKNEFIEAVKRVSLVAER
+                     NTPLRLSFTSDRLVLEAGTGEEAQAVEELSATLEGDDIQIAFNSTFLLDGLNAIESDV
+                     AHLQFTTSTKPAIITGKPADDGTASDYRYLIMPVRISN"
+     gene            4002..4886
+                     /locus_tag="Tfu_0003"
+     CDS             4002..4886
+                     /locus_tag="Tfu_0003"
+                     /EC_number="1.1.1.44"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="6-phosphogluconate dehydrogenase
+                     (decarboxylating)"
+                     /protein_id="AAZ54043.1"
+                     /db_xref="InterPro:IPR002204"
+                     /db_xref="InterPro:IPR004849"
+                     /db_xref="InterPro:IPR006183"
+                     /translation="MQLGMIGLGKMGGNMAARLRDKGHEVIGYDVNPELRDVDSIAEL
+                     VERLSAPRTVWLMVPAGEPTRNTIRELADLLDEGDLVIEGGNSHYRDDRVHADELARR
+                     GIEYLDAGVSGGIWGRENGYGIMVGGSAENVARAKPIFDALTPEAGSGFVHAGEIGAG
+                     HFVKMVHNGIEYGMMQAFAEGYELMAASGIVKDVPGTLASWRQGTVVRSWLLDLLVRA
+                     LEEDPELEQLRGYAEDSGEGRWTVQAAVDHAVPAPVITAALYARFASRQEDSPAMKVI
+                     AALRNQFGGHAVVKKNTD"
+     gene            4988..6121
+                     /locus_tag="Tfu_0004"
+     CDS             4988..6121
+                     /locus_tag="Tfu_0004"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA replication and repair protein RecF"
+                     /protein_id="AAZ54044.1"
+                     /db_xref="InterPro:IPR001238"
+                     /translation="MHVSHLQLADYRSYEAAYLELEPGVSTFIGPNGQGKTNLVEAIG
+                     YVATHSSHRVAHDAPLVRRGAQRAVIRAAVVRHGQTALIELEINPGRANRARLNRSPN
+                     TRMRDVLGILHTVLFAPEDLALVKGDPGERRRFLDELLTARAPRYAGVRSDYERVLKQ
+                     RNALLKSAAAQNLHHRGGRDLPTLDVWDEHLAQIGAELLAARLALVAELQPLAAKAYG
+                     ELTATQDPISLRYRCSATDEELDTTNRPQLVEILRAALLRARPDELRRGVSLVGPHRD
+                     DLQLWLNDLPAKGYASQGESWSYALALRLAGFELLRADGDDPVLLLDDVFAELDAERR
+                     RRLASYVRTAEQVLVTAAVPDDVPQELSGARFRVTGGSVERER"
+     gene            6111..6632
+                     /locus_tag="Tfu_0005"
+     CDS             6111..6632
+                     /locus_tag="Tfu_0005"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="conserved hypothetical protein"
+                     /protein_id="AAZ54045.1"
+                     /translation="MNGEHPAPERTDSPQTEENITPPTPLRGVELARQALAKARAEAK
+                     ARGAAPQGQDRKPQRSLVRSRGEPQQFGDAIRAWLIEHGWQEQVAIGGIFGRWSRIVG
+                     ERLAEHVRPCSYADGELVVAVDSPAWATQIRAMAPQLVRKLNEELGHGAVRVIKVNGP
+                     GGYRTSRGQWRVR"
+     gene            6950..8935
+                     /locus_tag="Tfu_0006"
+     CDS             6950..8935
+                     /locus_tag="Tfu_0006"
+                     /EC_number="5.99.1.3"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA gyrase subunit B"
+                     /protein_id="AAZ54046.1"
+                     /db_xref="InterPro:IPR000565"
+                     /db_xref="InterPro:IPR001241"
+                     /db_xref="InterPro:IPR003594"
+                     /db_xref="InterPro:IPR011557"
+                     /db_xref="InterPro:IPR011558"
+                     /translation="MSCGWSASPGRRVFPTLAYDARSITVLEGLEAVRKRPGMYIGST
+                     GERGLHHLVQEVVDNSVDEALAGYATAIEVTLLADGGVRVTDNGRGIPVDPHPVEKKP
+                     AVELVLTTLHAGGKFDSKSYAVSGGLHGVGVSVVNALSTRLEVEVRRDGYLWTQSYEM
+                     TKPVTELIRREPTDETGTQITFWPDGSIFETTTFNFETLSRRLQEMAFLNKGLSITIR
+                     DERPEFVGDSPVTQTYYYEGGLSDFVRHLNATKEPVHSSIIAFEEAGDGIAVEIAMQW
+                     NQSYTSSVHTFANTINTAEGGTHEEGFRAALTSIVNRYARDQKLLRDKDENLTGDDIR
+                     EGLTAIVSVKLADPQFEGQTKTKLGNTEAKSFVQKVCHEYLRDWLDRNPGEAKDIVTK
+                     ATQAARARIAARQARELTRRKTLLESTSLPGKLADCQSTDPERCEVYIVEGDSAGGSA
+                     KGGRDPYYQAILPIRGKILNVEKARIDRILKNNEVQAIITALGTGIHDDFDITKLRYH
+                     KIILMADADVDGQHIRTLLLTLLFRFMKPLIEAGHVYLAQPPLYKIKWDPRGTDVDYA
+                     YSDRERDEKIAAGIAAGKKDPRPRDLVQRFKGLGEMNPSELWETTMDPERRVLLQVTL
+                     DDAAQADEMFSVLMGEDVESRRAFIQRNARDVRFLDI"
+     gene            8992..11538
+                     /locus_tag="Tfu_0007"
+     CDS             8992..11538
+                     /locus_tag="Tfu_0007"
+                     /EC_number="5.99.1.3"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="DNA gyrase subunit A"
+                     /protein_id="AAZ54047.1"
+                     /db_xref="InterPro:IPR002205"
+                     /db_xref="InterPro:IPR005743"
+                     /translation="MTDVNTTPEAPDNTGGRIEPVDLQVEMQRSYLDYAMSVIIGRAL
+                     PDVRDGLKPVHQRVLYAMYDSGYRPDRGYFKCARVVGDVMGNYHPHGDSAIYETLVRL
+                     AQPWAMRMPLVDGNGNFGSPGNDPAAAMRYTECKLAPLAMEMLRDIDKETVDFRPNYD
+                     GRSQEPVVLPARFPNLLVNGSSGIAVGMATNIPPHNLREVAEGVYWYLDHPDASDEEL
+                     LDALIERIKGPDFPTRGRIVGRRGIEETYRTGRGSITMRAVVEIEEDKRGRQCLVVTE
+                     LPYQVNPDNLALKIAELVKEGKISGIADVKDESSGRTGQRLVIVLKRDAVAKVVLNNL
+                     YKHTQLQETFGANMLALVDGVPRTLRLDQMIRHWVAHQIEVIVRRTRYLLRKAEERAH
+                     ILRALLKAIDRIDEVIALIRGSASADDAKNGLMELLAIDDVQARAILDMQLRKLAALE
+                     RQQLTSEYDELMAQIADYNEILESPERQRRIIRDELAEIVEKYGDDRRTEIVPYEGDM
+                     RMEDFIAEEDIVVTITRGGYAKRTRLDNYRAQKRGGKGVRGAQLKQDDIVQHFFVTTT
+                     HHWILFFTNKGRVYRTKAYELPELARDSRGHHVANLVPFLPDEEIAQVLALRDYDAAP
+                     YLVLATRSGLVKKTKLAEFDSARSSGIIAINLREDDELIAARLVYPTDDLLLISSNAQ
+                     AIRFPASDDSLRPMGRATSGVIGMRFAEGDYLLSMDVIREGEGATDVLVATEGGYAKR
+                     TPADQYPVQKRGGKGVLTARIVESRGKLVGALMVDPEDEILAITSNGGVIRTKCAEIK
+                     QSQRATMGVRLMHLSKGNHVVAIARNTEGMGDDAENGAHGSEDAEDTEQD"
+     gene            11738..12430
+                     /locus_tag="Tfu_0008"
+     CDS             11738..12430
+                     /locus_tag="Tfu_0008"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative membrane protein"
+                     /protein_id="AAZ54048.1"
+                     /translation="MSDNAQRESAAVEPNPANTDKSGVDAARTTEVEGPETETLGTAT
+                     DSDEVTGAGGPETTGGAEGESPESADAAEASTSEAAQGGSDMAAEAVAASPSAESKTA
+                     KTAARKAHLTLSRIEPWSVMKFSFIISLVCFIILFVAVAVLYTGLEVLGVFDAVTELI
+                     TSLTEGDEVSEEFIINPEVWFSPTRILGYTALFGALNVILITALATAGAMLYNLSADL
+                     VGGIDVTLSETE"
+     gene            12591..12664
+                     /locus_tag="Tfu_R0001"
+     tRNA            12591..12664
+                     /locus_tag="Tfu_R0001"
+                     /product="tRNA-Ile"
+     gene            13759..14910
+                     /locus_tag="Tfu_0009"
+     CDS             13759..14910
+                     /locus_tag="Tfu_0009"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative transferase"
+                     /protein_id="AAZ54049.1"
+                     /translation="MSVVAVIPARGGSKGVPLKNLARVGGRPLVARAVDACRRADLVD
+                     MVVVSTDHDGIAAVARDAGATVVERPADLGADTASSESVLLHALDRLAEDGINPQILV
+                     FVQCTSPFIDPADLDDAVRQVRDDLADSVFSAVETYEFLWHITPDGARGVNHDHTYRP
+                     RRQDRAPHYRETGAFYVLRVSGFREHQHRFFGRIAVQQVNPAHAVEVDSVEELDLACA
+                     VARALDREEPLDVDAVVTDFDGVHTDDRVYVDQDGRETVVVNRGDGMGVSLLLKAGIR
+                     VCILSTEVNSVVRARARKLGVPVMHGLSDKRTALLQWMADEGLDPARVAYVGNDVNDL
+                     GCLAEVGWPIAVPDSHPDVLAAARLVLTRPGGSGAVREICERVLAARKG"
+     gene            14917..15828
+                     /locus_tag="Tfu_0010"
+     CDS             14917..15828
+                     /locus_tag="Tfu_0010"
+                     /EC_number="2.5.1.56"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="N-acetylneuraminate synthase"
+                     /protein_id="AAZ54050.1"
+                     /db_xref="InterPro:IPR000276"
+                     /translation="MTQNATTDLSVSVPAPVAIGDILVGPGQPTYVIGEIGINHNGDV
+                     DIARQLIEVAAEAGCHAVKFQKRTPEICVPKEQRDKIRQTPWGEMTYLEYKHRVEFGR
+                     DEYTEIAKICEENGLQWFASPWDVPSVEFLESFDVVAHKVASASITDHELLRALAATG
+                     KPIILSTGMSTIEEIDAAVEIFDRSKLILMHSTSTYPMPPEEANLRTIITLRERYGVP
+                     VGYSGHERGLQISLAAVTLGAVAVERHITLDRTMWGSDHAASLEPAGLQHLVRDIRVI
+                     EQALGDGVKRVFPGEEEPRKRLRRTTA"
+     gene            15907..16869
+                     /locus_tag="Tfu_0011"
+     CDS             15907..16869
+                     /locus_tag="Tfu_0011"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative glycosyltransferase"
+                     /protein_id="AAZ54051.1"
+                     /db_xref="InterPro:IPR001173"
+                     /translation="MTTLSVIIPVRDVAPLIADTLESLRRNARPDFEFIVVDDASSDA
+                     TPEVVEDSGVPGLTLLRSERSLGPSAARNRGLAVAQGQYVAFLDGDDWLAPGYLADAV
+                     EAIADLGVDFIKTDHVKVTGKARSRARVPEGRRGVALPARSGIPPEHATTMVDYPNVW
+                     SGVYDRRLYEQGLLSFDEDLHTAEDRLWTWRLHLHADTFAAVPLVGVFYRREVPQSLT
+                     QAGDERQLQFFDAHDRIRAELESLPDGERYLPKLIRTYCALIAFHLDREDRLAPRVRR
+                     QLRSRAAAALSAMPPRLLARVLPALGAEREQLLAELVDLETVVA"
+     gene            16874..18202
+                     /locus_tag="Tfu_0012"
+     CDS             16874..18202
+                     /locus_tag="Tfu_0012"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="conserved hypothetical protein"
+                     /protein_id="AAZ54052.1"
+                     /db_xref="InterPro:IPR010916"
+                     /translation="MAQLFVASTFFGAMSLAAALDAGQFGAADQRRILVVSNNALVPE
+                     VVPPLDAAPGFDVLRSRFGEVVSWNELLWPFHPSTWQPRQQERPLLNRLLRHYWDLAE
+                     DEPLHLVVESIQVPPARAFASVFDDAAITVYSDGLMSYGPTRESPPREVATRIDRVLY
+                     LDLVPGVEPLLLSEYGVARRTISGEAFRAVVAEVAKAVDGVGERTAWAGAPLLLGQYL
+                     AALNFLTAAEEDALHARMLRGVAAQGHRTVLFKPHPSTTARTFRTLHATAEQQGVQLV
+                     VLDEPVPVEVWYEVLRPALVVGVFSTGLSTASRYYGLPVATVGTELLLDRITPYQNSN
+                     RIPVTLADATMPRLAEDGTVHPPRITADRVAEELLPLLVAVGYCMQNSVYSHLRDEAV
+                     AYLSRGLDEVTRRYFKKRRLTALRLPGAAPAKPRSLPWLAARVRRLRGRS"
+     sig_peptide     16874..17029
+                     /locus_tag="Tfu_0012"
+                     /note="Signal predicted by SignalP 2.0 HMM (Signal peptide
+                     probabilty 0.841) with cleavage site probability 0.445 at
+                     residue 52"
+     gene            complement(18230..18988)
+                     /locus_tag="Tfu_0013"
+     CDS             complement(18230..18988)
+                     /locus_tag="Tfu_0013"
+                     /inference="non-experimental evidence, no additional
+                     details recorded"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="putative integral membrane protein"
+                     /protein_id="AAZ54053.1"
+                     /translation="MMGFSHATTGVLVGVAVAAPLAAAAGTPPTPMGLLAWALLGAGS
+                     ALVPDLDHPSSTATRSQGFVTGLLSRGMRALSLAVYRRTRTPADRSDGEHRHLGHTPV
+                     FAAAVGAVIGLLCHLSWWATLVTAWFLAFLGLRALRKVAWRGLRTALGSWPGAALGAL
+                     CVAALFLTAWDNYPPGWIVGAVVALGMIVHSLGDALTSSGVPLAWPFTVNGRRWAMLG
+                     VPRWMRFRTGTWPEWVVGAVSLTGSLAVGYALVA"
+     sig_peptide     complement(18914..18988)
+                     /locus_tag="Tfu_0013"
+                     /note="Signal predicted by SignalP 2.0 HMM (Signal peptide
+                     probabilty 1.000) with cleavage site probability 0.583 at
+                     residue 25"
+     gene            complement(19163..20473)
+                     /locus_tag="Tfu_0014"
+     CDS             complement(19163..20473)

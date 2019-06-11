@@ -53,7 +53,7 @@ def parseDoubleFastaQ(filename, verbose=True):
             if verbose:
                 # tested on data_set1, 
                 print("H1",h1.split(":")[-1],"allDNA=",all([s in "ATCG" for s in s1]),
-                        "H2",h2.split(":")[-1],"allDNA=",all([s in "ATCG" for s in s2]))
+                        "H2",h2.split(":")[-1],"allDNA=",all([s in "ATCG" for s in s2]), len(s1), len(s2))
     return data
 
 

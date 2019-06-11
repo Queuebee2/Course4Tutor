@@ -4,7 +4,7 @@ import mysql.connector
 HOST_DEFAULT = "hannl-hlo-bioinformatica-mysqlsrv.mysql.database.azure.com"
 USER_DEFAULT = "kmoes@hannl-hlo-bioinformatica-mysqlsrv"
 DATABASE_DEFAULT = "kmoes"
-LOCAL_FIREBALL = False # we need a fireball, conjured by a magician.
+LOCAL_FIREBALL = True # we need a fireball, conjured by a magician.
 
 
 
@@ -31,7 +31,15 @@ class DbConnector():
         self._connect()
     
 
+    def select_results(self):
+        """ hardcoded select current results"""
+        
+        self.cursor.execute("SELECT * FROM blast_result")
 
+        results = self.cursor.fetchall()
+
+        return results
+    
     def insert(self, query, values):
         """
         example: insert into BLAST_result (Query_id, resultaat_id,
@@ -77,8 +85,8 @@ class DbConnector():
     def __wizardman(self):
         # a wizard never reveals it's secret methods
         print("conjuring a fireball...")
-        if not LOCAL_FIREBALL:
-            from sqlmethod import thingy as joke
+        joke = b'QW4zWGFtcGxlU1NBUERST1ckMGwxZDRucjNtM21iM3I0Ymxlbm9ybWFsbHlpanVzdHdyaXRlYWxpdHRsZXN0b3J5bGlrZXRoaXNhbmRpdHNhbHdheXNhZ29vZHBhc3N3b3JkdGhhdHdheQ=='
+
 
         lmfao = magic_wizardry(joke)
         fireball = self._DbConnector__wizard_helper(lmfao)

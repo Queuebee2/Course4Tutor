@@ -101,18 +101,6 @@ def main():
     # find a better solution ree
     saveData(DEFAULT_HEADERS)
 
-    # resolved using saveData()
-    """   
-        ########## TEMPORARY CSV SOLUTION
-        with open ("output.csv", 'w') as csvfile:
-            print("making temp csv file for test")
-            writerhandle = csv.writer(csvfile, delimiter= ',')
-
-            writerhandle.writerow(["header","title","length",
-                                   "score", "gaps", "e-val" ])
-        ########## TEMPORARY CSV SOLUTION
-    """
-
     print("got parsed data from parseFastaQ")
     blastcount = 0 # little counter to keep track of progress
 
@@ -190,19 +178,6 @@ def main():
                     print(blastcount,'sucessful blasts')
                 else:
                     pass
-
-                # resolved using saveData()
-                """
-                        ########## TEMPORARY CSV SOLUTION
-                            row = [header_key] + result_attributes
-                            print("writing to csv")
-                            #row = ",".join([str(i) for i in row])
-                            writerhandle.writerow(row)
-                            print(row)
-                            print(10*"_-")
-                            
-                        ########## TEMPORARY CSV SOLUTION
-                """
                 # we REALLY need to make sure blast requests aren't
                 # made  too frequently
                 # note: in the NCBIWWW module, hardcoded 20-90 second

@@ -22,9 +22,9 @@ FILE_1 = "testdata_file2.txt"
 FILE_2 = "testdata_file1.txt"
 TEST_FILES = [FILE_1, FILE_2]
 
-
+#@outdated
 FIRST_BATCH_FILES = ["-at-HWI-M02942_file1.txt",
-         "-at-HWI-M02942_file2.txt"]
+                     "-at-HWI-M02942_file2.txt"]
 
 NEW_BATCH_FILES = ["data_set1.txt"]
 CSV_FILE_NAME = "data_backup.csv"

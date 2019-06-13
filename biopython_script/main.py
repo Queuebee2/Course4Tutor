@@ -113,9 +113,13 @@ def main():
     for header_key, list_value in header_data_dict.items():
 
         # get sequence string to use for blast query
+        # list value format: [sequence(str),qualscore(int),asciimappingqualscore(string)]
         sequence = list_value[0]
+
         # get seq id, e.g. :2351/1
-        seq_id = header_key[-8:-1]
+        # header format = @ghawreiufhiwauefhiawuehfiawehfuw3234324:2342/1
+        # changed [-8:-1] to [-8:] to include last character (twin identifier)
+        seq_id = header_key[-8:]
 
         # ------------- carthesian mess incoming -------------
         # here we go through multiple types of blast programs

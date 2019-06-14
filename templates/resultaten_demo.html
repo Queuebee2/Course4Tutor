@@ -19,7 +19,7 @@
 		<li><a href = "statistieken">Statistieken</a></li>
 		<li><a href= "zelf_blasten">Zelf Blasten</a></li>
 		<li><a href="FAQ">FAQ</a></li>
-		<li><a href= "contact">Contact</a></li>
+		
 	</ul>
 </nav>
 </header><br><br>
@@ -38,14 +38,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec laoreet dolor
 <div class="blast_demo">
 <form method="POST" "><button type="submit" name="button" value="select_results">submit dna</button></form>
 {% if blast_results %}
-{% for result in blast_results %}
-{{result}} <br>
-    {% endfor %}
+{{ blast_results }}
 {% else %}
 {% endif %}
 </div>
-<hr>
-<footer>
+
+<footer style="margin-top: 350px">
 <div class = "bottom">
 Groep EENhoorn bestaat uit vier groepsleden, die studeren aan de Hogeschool van Arnhem en Nijmegen.
 Deze site is gemaakt om de gevonden organismen en eiwitten uit compost op een overzichtelijke manier te laten zien aan biologen.

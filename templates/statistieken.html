@@ -4,6 +4,7 @@
 <title>EENhoorn</title>
 <meta charset="UTF-8">
 <link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 </head>
 <main><body>
 <header>
@@ -18,7 +19,7 @@
 		<li><a href = "statistieken" class= "actief">Statistieken</a></li>
 		<li><a href= "zelf_blasten">Zelf Blasten</a></li>
 		<li><a href="FAQ">FAQ</a></li>
-		<li><a href="contact">Contact</a></li>
+		
 	</ul>
 </nav>
 </header><br><br>
@@ -26,19 +27,75 @@
 <h1>Statistieken</h1>
 <p>Hier kan je de uitkomsten (de gevonden organismen en eiwitten) vinden van het project.<br>
 Dit is weergegeven in grafieken.<br>
-Je kan ook uit verschillende weergaven kiezen.</p>
+</p>
 </div>
 <br><br>
-<canvas>
-	<script type="text/javascript" src="{{ url_for('static', filename= 'js/eerste_javascript.js') }}"></script>
-</canvas>
-<form method="POST">
-<select>
-	<option value="pie_chart">Cirkeldiagram</option>
-	<option value="staafdiagram">Staafdiagram</option>
-</select>
-<input type = "submit" value="Submit">
-</form><br><br>
+<div>
+<canvas id = "myChart"></canvas>
+</div>
+<script>
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")"
+    ; 
+}
+
+let myChart = document.getElementById('myChart').getContext('2d');
+let overzicht = {{data}}
+let kleuren = []
+
+let overzicht_lengte = overzicht.length;
+
+	for(i =0; i < overzicht_lengte; i++){
+	var kleur = random_bg_color();
+	kleuren.push(kleur);
+
+let massPopChart = new Chart(myChart, {type:'pie',//bar, horizontalBar, pie, line,doughnut, radar, polarArea
+				     data:{
+				     labels: overzicht ,
+				     datasets:[{
+				     label:'Voorkomen',
+				     data:[
+				     1,2,1,2,1,1, 6, 1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+				     ]
+				     ,
+				     backgroundColor: kleuren
+					,
+					borderColor:'lightgrey',
+					hoverBorderWidth: 3,
+					hoverBorderColor: 'black'
+				     }]},
+				      options: {}
+				      });
+
+</script>
+<br><br>
+	
+
+<div>
+	<canvas id= "Meest_voorkomend"></canvas>
+	</div>
+<script>
+	let Meest_voorkomend = document.getElementById('Meest_voorkomend').getContext('2d');
+	let namen = ['Streptomyces','Minicystis','Thermobifida', 'Luteimonas', 'Thermaerobacter']
+	let voorkomt = [2,2,6,2,2]
+	let massPopChart2 = new Chart(myChart, {type:'pie',
+						data: {
+							labels: namen,
+							datasets: [{
+								label: 'Voorkomen',
+								data: voorkomt,
+								backgroundColor: ['grey', '#69968C', 'lightgrey', '#8BB8A8', '#273043'],
+								borderColor: 'lightgrey',
+								hoverBorderWidth: 2,
+								hoverBorderColor: 'black'
+							}]},
+						options: {}
+					       });
+	</script>
+	<br><br>
 <hr>
 <footer>
 <div class = "bottom">

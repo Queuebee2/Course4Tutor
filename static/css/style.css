@@ -28,7 +28,7 @@ footer {
 
 .logo {
 	float: left;
-	margin-left: 450px;
+	margin-left: 35%;
 	margin-top: 5px;
 	margin-right: 50px;
 	width: 4%;
@@ -59,6 +59,8 @@ body {
 font-family: Arial;
 display: flex;
 flex-direction: column;
+
+
 }
 
 nav ul {
@@ -151,6 +153,49 @@ p {
 
 }
 
+table {
+border-collapse: collapse;
+	margin-top: 25px;
+	table-layout: fixed;
+	
+}
+
+table th {
+background-color: #8BB8A8;
+color: white;
+}
+/* code hieronder deels overgenomen van https://www.youtube.com/watch?v=5sbPjvbfzk8 */
+
+#div1{
+height:20px;
+width:100%;
+padding:0;
+margin:0;}
+
+#tabel1 {
+width:99%;
+cellspacing:0px;
+celpadding: 20px;
+padding-right: 15px;
+font-size: 15px;}
+
+#div2{
+height: 200px;
+width:100%;
+overflow-y: auto;
+overflow-x:hidden;
+margin-bottom: 50px;
+}
+
+#tabel2 {
+width:100%;
+cellspacing:0px;
+celpadding: 20px;
+height: 100%;
+font-size: 15px;
+	
+}
+/* einde van overgenomen code */
 
 .omhoog {
 	margin-top: 200px;
@@ -174,6 +219,7 @@ hr {
 }
 
 .bottom {
+	margin-top: 50px;
 	color: grey;
 	background-color: lightgrey;
 	text-align: center;

@@ -89,8 +89,9 @@ def parseGoodFastaQ(filename, common_ids=[],verbose=False):
     with open (filename, 'r') as f:
         for line in f:
             for identifier in common_ids:
-                if (identifier in line) and (
-                        "@HWI" in line):
+                has_identifier = identifier in line
+                is_header = "@HWI" in line
+                if has_identifier and is_header:
                     identifier = line
                     data[identifier] = []
                     for i in range(3):

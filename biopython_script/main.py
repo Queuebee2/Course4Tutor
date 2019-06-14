@@ -178,7 +178,8 @@ def main():
 
                 # count
                 blastcount += 1
-                if blastcount % 10 == 0:
+                do_blast_print = blastcount % 10 == 0
+                if do_blast_print:
                     print(blastcount,'sucessful blasts')
                 else:
                     pass

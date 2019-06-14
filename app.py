@@ -118,7 +118,11 @@ def createHtmlTable(rows):
     for row in rows:
         ts += "<tr>"
         for column in row:
-            ts += "<td>" + str(column) + "</td>"
+            if column == None:
+                value = "NULL"
+            else:
+                value = str(column)
+            ts += "<td>" + value  + "</td>"
         ts += "</tr>"
     ts += "</table>"
     ts += "</div>"

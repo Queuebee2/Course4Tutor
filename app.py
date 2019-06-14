@@ -1,10 +1,10 @@
 import Bio
-import flask as Flask
+
 from Bio.Blast import NCBIWWW
 from Bio import SeqIO
 from Bio.Blast import NCBIXML
 import Bio.Blast.Record as record
-from biopython_script.db_insert import DbConnector
+from biopython_script.DbConnector import DbConnector
 from flask import Flask, request, render_template, url_for, Markup
 from Bio.Seq import Seq
 
@@ -14,6 +14,10 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+
+
 
 
 @app.route('/',methods =['POST'])
@@ -111,4 +115,5 @@ def createHtmlTable(rows):
 
 
 if __name__ == '__main__':
+    print('hello')
     app.run(use_reloader=True, debug = True)

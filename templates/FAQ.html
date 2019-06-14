@@ -1,43 +1,80 @@
 <!DOCTYPE html>
 <head>
-<link rel = "icon" href= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" type="image/x-icon">
-<title>EENhoorn</title>
-<meta charset="UTF-8">
-<link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
-<script src="myscripts.js"></script>
+	<link rel = "icon" href= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" type="image/x-icon">
+	<title>EENhoorn</title>
+	<meta charset="UTF-8">
+	<link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
+	<script src="myscripts.js"></script>
 </head>
-<main><body>
-<header>
-<div>
-<img src= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" alt = "eenhoorntje" class = "logo">
-<h1 class = "top" class= "naar_links">EENhoorn</h1>
-</div>
-<nav class = "rond">
-	<ul>
-		<li><a href = "index" class = "eerste_nav">Home</a></li>
-		<li><a href= "about">Over het project</a></li>
-		<li><a href = "statistieken">Statistieken</a></li>
-		<li><a href= "zelf_blasten" >Zelf Blasten</a></li>
-		<li><a href="FAQ" class="actief">FAQ</a></li>
-		
-	</ul>
-</nav>
-</header><br><br>
-<div>
-<h1>Frequently Asked Questions</h1>
-<p><b><i>Wat is BLAST?</i></b></p>
-<p><b><i>Welke database moet ik kiezen?</i></b></p>
-</div>
-<hr>
-<footer>
-<div class = "bottom">
-Groep EENhoorn bestaat uit vier groepsleden, die studeren aan de Hogeschool van Arnhem en Nijmegen.
-Deze site is gemaakt om de gevonden organismen en eiwitten uit compost op een overzichtelijke manier te laten zien aan biologen.
-Op deze site is tevens de functie van één van de eiwitten te vinden.
-De organismen en eiwitten zijn gevonden door middel van BLAST van NCBI. De groep heeft een geautomatiseerde <br>
-BLAST tool ontwikkeld.
-De tool en uitkomsten zijn voor het laatst geüpdatet op
-</div>
-</footer>
-</body></main>
+<main>
+	<body style="text-align: left">
+		{% block header %}
+			<div>
+				<img src= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" alt = "eenhoorntje" class = "logo">
+				<h1 class = "top" class= "naar_links">EENhoorn</h1>
+			</div>
+			<nav class = "rond">
+				<ul>
+					<li><a href = "index" class = "eerste_nav">Home</a></li>
+					<li><a href= "about">Over het project</a></li>
+					<li><a href = "statistieken">Statistieken</a></li>
+					<li><a href= "zelf_blasten" >Zelf Blasten</a></li>
+					<li><a href="FAQ" class="actief">FAQ</a></li>
+
+				</ul>
+			</nav>
+		{% endblock header %}
+		<br><br>
+		<div>
+			<h1>Frequently Asked Questions</h1>
+				<p>
+					<b>Q: Wat is blast?</b><br>
+					A: The Basic Local Alignment Search Tool, of "BLAST" zoekt naar gebieden met een lokale gelijkenis tussen sequenties. Het programma vergelijkt nucleotide- of aminozuursequenties met sequentiedatabases en berekent de statistische significantie van overeenkomsten. BLAST kan worden gebruikt om functionele en evolutionaire relaties tussen sequenties te vinden en om leden van genfamilies te classificeren.
+				</p>
+				<p>
+					<b>Q: Welke parameters zijn gebruikt voor de Blast resultaten van de champignon compost?</b><br>
+					A: 
+					<ul>
+						<li>Matrix: BLOSUM62</li>
+						<li>Database: nt</li>
+						<li>Programma: tBLASTx</li>
+					</ul>
+				</p>
+				<p>
+					<b>Q: Wat is Metagenomics?</b><br>
+					A: Metagenomics is de studie van genetisch materiaal dat direct wordt teruggewonnen uit milieumonsters. <br>
+					Het brede veld kan ook worden aangeduid als omgevingsgenomica of ecogenomica
+				</p>
+				<p>
+					<b>Q: Wat betekenen de resultaten precies?</b><br>
+					A: Uit een BLAST van een bepaalde DNA, RNA, of aminozuur sequenties komen meestal de volgende resultaten:
+					<ul>
+						<li>Max.[Imum] -score: de hoogste allign-score berekend op basis van de som van de beloningen voor gematchte nucleotiden of aminozuren en penaliteiten voor misparingen en hiaten.</li>
+						<li>Tot [al] Score: de som van allign-scores van alle segmenten uit dezelfde sequentie.</li>
+						<li>Query Cover[age]: het percentage van de querylengte dat is opgenomen in de segmenten.</li>
+						<li>E [xpect] Value: het aantal aanpassingen dat bij toeval wordt verwacht met de berekende score of beter.<br> 
+						De verwachtingswaarde is de standaardsorteerwaarde; voor significante allignments moet de E-waarde bijna nul zijn.</li>
+						<li>Identity: de hoogste procentuele identiteit voor een reeks “alligned” segmenten voor dezelfde sequentie.</li>
+					</ul>
+				</p>
+				<p>
+					<b>Q: Waarom heet jullie groep EENhoorn en wat heeft dit met champignons of compost te maken?</b><br>
+					A: Wij zijn de eerste van de opgestelde projectgroepen voor dit onderzoek. <br>
+					Daarmee zijn eenhoorns gewoon coolere versies van paarden en als je verkeerde champignons eet kan je ze misschien ook wel zien.
+				</p>
+
+		</div>
+		<hr>
+		<footer>
+			<div class = "bottom">
+				Groep EENhoorn bestaat uit vier groepsleden, die studeren aan de Hogeschool van Arnhem en Nijmegen.
+				Deze site is gemaakt om de gevonden organismen en eiwitten uit compost op een overzichtelijke manier te laten zien aan biologen.
+				Op deze site is tevens de functie van één van de eiwitten te vinden.
+				De organismen en eiwitten zijn gevonden door middel van BLAST van NCBI. De groep heeft een geautomatiseerde <br>
+				BLAST tool ontwikkeld.
+				De tool en uitkomsten zijn voor het laatst geüpdatet op 14/06/2019
+			</div>
+		</footer>
+	</body>
+</main>
 </html>

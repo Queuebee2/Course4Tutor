@@ -1,4 +1,5 @@
 from db_insert import DbConnector
+from DbConnector import DbConnector
 
 DATA_FILE = "new_tab_delimited_stuff.txt"
 

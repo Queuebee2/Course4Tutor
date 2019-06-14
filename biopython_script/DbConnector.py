@@ -31,15 +31,63 @@ class DbConnector():
         self._connect()
     
 
-    def select_results(self):
-        """ hardcoded select current results"""
+    def select_results(self, limit = 100):
+        """ hardcoded select to just select current results"""
         
-        self.cursor.execute("SELECT * FROM blast_result")
+        self.cursor.execute("SELECT * FROM blast_result LIMIT " + str(limit +";"))
 
         results = self.cursor.fetchall()
 
         return results
-    
+
+    def insert_from_form_data(self, formdata):
+
+
+        values = []
+        tables = []
+        
+        for k, v in formdata.items():
+            tables.append(k)
+            values.append(v)
+
+        query_tables = ",".join(['`'+str(i)+'`'for i in tables])
+
+        query_end = ")"
+        value_placeholders = ','.join(['%s' for item in values])
+        query = "insert into blast_result(%s) VALUES(%s);" % (query_tables,
+                                                              value_placeholders)
+
+        print(query)
+        self.cursor.execute(query, values)
+        self.connection.commit()
+        print(self.cursor.rowcount, 'record inserted')
+                          
+
+    def search_from_form_data(self, formdata,
+                              operator='and',limit=10):
+
+
+        conditions = ""
+        for key, value in formdata.items():
+            if type(value) == str:
+                conditions += (" ({} LIKE '%{}%') {}".format(key, value, operator))
+            else:
+                conditions += (" (%s LIKE %s) %s" % (key, value, operator))
+
+        conditions = conditions.rstrip(operator)
+                            
+
+        query = ("SELECT * FROM blast_result WHERE %s" % conditions) + " LIMIT "+str(limit)+";"
+        print(query)
+
+        
+        self.cursor.execute(query)
+
+        results = self.cursor.fetchall()
+
+        return results
+            
+            
     def insert(self, query, values):
         """
         example: insert into BLAST_result (Query_id, resultaat_id,

@@ -17,6 +17,18 @@ def index():
 
 
 
+@app.route('/forms', methods=["GET","POST"])
+def forms_to_dict():
+    formables = ['seq-id', 'sequence', 'evalue', 'memes']
+    if request.method == 'POST':
+        if request.form['button'] == 'submit_forms':
+            form_results = request.form.to_dict()
+            print(form_results)
+            return render_template('forms_to_dict_test.html', formables=formables, form_results=form_results)
+
+    elif request.method == 'GET':
+        return render_template('forms_to_dict_test.html',formables=formables)
+
 
 
 

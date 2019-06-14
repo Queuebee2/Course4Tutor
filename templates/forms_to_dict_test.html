@@ -1,0 +1,33 @@
+
+<html>
+<body>
+{% block form %}
+
+{% if formables %}
+    <form method="POST"}>
+    <table>
+    {% for keyname in formables %}
+        <tr>
+        <td>{{ keyname }}</td>
+        <td><input name="{{ keyname }}" type="text" value=""> </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <button type="submit" name="button" value="submit_forms">submit forms</button>
+    </form>
+
+{% else %}no formables{% endif %}
+{% endblock form %}
+
+{% block results %}
+{% if form_results %}
+    {% for key, value in form_results.items() %}
+        {{ key }} , {{ value }} <br>
+    {% endfor %}
+
+{% else %}no form results{% endif %}
+{% endblock results %}
+
+</body>
+</html>

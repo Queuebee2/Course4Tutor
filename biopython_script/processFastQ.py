@@ -22,20 +22,20 @@ class ScuffedDataError(BaseException):
 
 
 
-# we use common identifiers ( identifiers to find fastaQ entry pairs
+# we use common identifiers ( identifiers to find fastQ entry pairs
   # from file 1 and 2 ) for testing purposes/weektaak1
 def main():
     print("RUNNING MAIN (FOR TESTING! PROCESSILUMINA V.1")
 
     # create test files
-    #data = parseFastaQ(FILES,COMMON_IDENTIFIERS)
+    #data = parsefastQ(FILES,COMMON_IDENTIFIERS)
     #print(data)
-    parseFastaQ([SCUFFED_XLSX_DATA_SET_FILE ,TESTFILE_1], verbose=True)       
+    parsefastQ([SCUFFED_XLSX_DATA_SET_FILE ,TESTFILE_1], verbose=True)       
         
     print("TESTING DONE")
 
 
-def parseDoubleFastaQ(filename, verbose=True):
+def parseDoublefastQ(filename, verbose=True):
     """ return a dictionary  in format {Header:[sequence,scoreascii]}
         for a scuffed copy paste of an xlsx workbook tab into notepad"""
 
@@ -77,13 +77,13 @@ def testForScuffed(filename):
             print("you got scuffed data")
             return True
         else:
-            print("That data could be proper fastaQ format")
+            print("That data could be proper fastQ format")
             return False
 
 
 
 
-def parseGoodFastaQ(filename, common_ids=[],verbose=False):
+def parseGoodfastQ(filename, common_ids=[],verbose=False):
 
     data = dict()
     with open (filename, 'r') as f:
@@ -99,7 +99,7 @@ def parseGoodFastaQ(filename, common_ids=[],verbose=False):
                                                 replace("\n", ""))
     return data
 
-def parseFastaQ(filenames, common_ids=[],verbose=False):
+def parsefastQ(filenames, common_ids=[],verbose=False):
     """ assume string 'HWI' in every header"""
 
     # filenames should be a list, otherwise, throw error
@@ -112,9 +112,9 @@ def parseFastaQ(filenames, common_ids=[],verbose=False):
 
         # test for scuffed and handle accordingly
         if testForScuffed(filename):
-            part_data = parseDoubleFastaQ(filename)
+            part_data = parseDoublefastQ(filename)
         else:
-            part_data = parseGoodFastaQ(filename)
+            part_data = parseGoodfastQ(filename)
             
         # merge dicts
         data = {**data, **part_data}

@@ -1,28 +1,22 @@
-<!DOCTYPE html>
-<head>
+{% extends '/layout.html' %}
+{% block head %}<head>
 <link rel = "icon" href= "{{ url_for('static', filename= 'images/eenhoorn') }}" type="image/x-icon">
 <title>EENhoorn</title>
 <meta charset="UTF-8">
 <link href= "{{ url_for('static', filename= 'css/style.css') }}" rel= "stylesheet">
 <script src="myscripts.js"></script>
-</head>
+</head>{% endblock head %}
+{% block body%}
 <main><body>
+{% block header %}
 <header>
 <div>
 <img src= "{{ url_for('static', filename= 'images/eenhoorn.png') }}" alt = "eenhoorntje" class = "logo">
 <h1 class = "top" class= "naar_links">EENhoorn</h1>
 </div>
-<nav class = "rond">
-	<ul>
-		<li><a href = "index" class = "actief" class = "eerste_nav" style="margin-left:20px">Home</a></li>
-		<li><a href= "about">Over het project</a></li>
-		<li><a href = "statistieken">Statistieken</a></li>
-		<li><a href= "zelf_blasten">Zelf Blasten</a></li>
-		<li><a href="FAQ">FAQ</a></li>
-		
-	</ul>
-</nav>
-</header><br><br>
+{# navbar verplaatst naar layout.html #}
+</header><br><br>{% endblock header %}
+
 <!-- voeg hier van die afspelende plaatjes en dat je dan op volgende klikt !-->
 <h1>Home</h1>
 <img src="{{ url_for('static', filename= 'images/schattige_mushroom.png') }}" alt = "Schattige mushroom" class = "midden" style="width:10%; margin-top:150px;">
@@ -42,16 +36,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec laoreet dolor
 {% else %}
 {% endif %}
 </div>
-
-<footer style="margin-top: 350px">
-<div class = "bottom">
-Groep EENhoorn bestaat uit vier groepsleden, die studeren aan de Hogeschool van Arnhem en Nijmegen.
-Deze site is gemaakt om de gevonden organismen en eiwitten uit compost op een overzichtelijke manier te laten zien aan biologen.
-Op deze site is tevens de functie van één van de eiwitten te vinden.
-De organismen en eiwitten zijn gevonden door middel van BLAST van NCBI. De groep heeft een geautomatiseerde <br>
-BLAST tool ontwikkeld.
-De tool en uitkomsten zijn voor het laatst geüpdatet op
-</div>
-</footer>
+<hr>
+{#footer moved to footer.html and included in layout.html#}
 </body></main>
-</html>
+</html>{% endblock body%}
+

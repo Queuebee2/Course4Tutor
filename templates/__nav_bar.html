@@ -1,0 +1,16 @@
+
+{% block navbar %}
+
+<nav class = "rond">
+        <ul>
+        {% for item in NAVIGATION_ITEMS %}
+            {% if  item ==  request.path|replace('/','') %}
+                <li><a href="/{{ item }}" ><b>{{ item }}</b></a><br></li>
+            {% else %}
+                <li><a href="/{{ item }}">{{ item }}</a> <br></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </nav>
+
+{% endblock navbar %}

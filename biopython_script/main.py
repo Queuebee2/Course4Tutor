@@ -1,6 +1,6 @@
 from blastaseq import parseBlast  # args: xml_file-name
 from blastaseq import doBlast  # args: query_seq, filename
-from processFastQ import parseFastaQ  # args: filenames, common_ids
+from processFastQ import parseFastQ  # args: filenames, common_ids
 
 # TO DO
 """
@@ -24,7 +24,7 @@ def main():
     # grab {header:[nucseq, qualityscore, qualityASCIImap]}
     # from input file(s)
     # note: first dataset was 2MB 
-    header_data_dict = parseFastaQ(NEW_BATCH_FILES)
+    header_data_dict = parseFastQ(NEW_BATCH_FILES)
 
     # show amount of sequences to be blasted
     print(len(header_data_dict))
@@ -37,7 +37,7 @@ def main():
     # find a better solution ree
     saveData(DEFAULT_HEADERS)
 
-    print("got parsed data from parseFastaQ")
+    print("got parsed data from parseFastQ")
     blastcount = 0 # little counter to keep track of progress
 
     data = dict()  # store values now,
@@ -194,8 +194,8 @@ def toCSV(dataDict):
 
 
 def testFastathing():
-    # maybe eencorporate the DNA check in the processillumina.parseFastaQ
-    data = parseFastaQ(["-at-HWI-M02942_file1.txt",
+    # maybe eencorporate the DNA check in the processillumina.parseFastQ
+    data = parseFastQ(["-at-HWI-M02942_file1.txt",
                         "-at-HWI-M02942_file2.txt"])
 
     DNAli = [data[x][0] for x in data.keys()]
